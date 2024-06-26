@@ -11,10 +11,4 @@ class HomeController extends Controller
     {
         return view('home.index');
     }
-
-    public function store(Request $request)
-    {
-        //dd($request);
-        return 'exito';
-    }
 }
