@@ -58,7 +58,7 @@
             processing: true,
             serverSide: true,
             destroy: true,
-
+            order: [],
             ajax: {
                 url: "{{ route('Reporte') }}",
                 type: 'post',
@@ -69,7 +69,7 @@
             aoColumns:
             [
                 { data: 'nivel' },
-                { data: 'nombre' },
+                { data: 'nombre_identado' },
                 { data: 'stock_acumulado' }
             ]
         });

@@ -29,7 +29,7 @@ class ReportController extends Controller
             WHERE deleted_at IS NULL
         )
 
-        SELECT id, nombre, SUM(stock) AS stock_acumulado, nivel
+        SELECT id, CONCAT(REPEAT('_', nivel * 4), nombre) AS nombre_identado, SUM(stock) AS stock_acumulado, nivel
         FROM CategoriaConSubcategorias
         GROUP BY id, nombre, nivel
         ORDER BY id;");
