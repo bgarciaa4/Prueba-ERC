@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home\CategoriasController;
+use App\Http\Controllers\Home\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +27,5 @@ Route::post('editar', [CategoriasController::class, 'editar'])->name('categorias
 Route::post('actualizar', [CategoriasController::class, 'actualizar'])->name('categorias.actualizar');
 
 //REPORTE DE STOCK
-Route::get('/indexStock', [CategoriasController::class, 'indexStock'])->name('indexStock');
-Route::post('Reporte', [CategoriasController::class, 'reporteDeStock'])->name('Reporte');
+Route::get('/indexStock', [ReportController::class, 'index'])->name('indexStock');
+Route::post('Reporte', [ReportController::class, 'reporte'])->name('Reporte');
